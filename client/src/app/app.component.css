@@ -1,0 +1,19 @@
+#nav-root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #64AFDA;
+    font-size: 1.2rem;
+    width: 94%;
+    padding: 2% 3% 2% 3%;
+}
+
+#footer-root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2F78A0;
+    font-size: 1rem;
+    width: 94%;
+    padding: 2% 3% 2% 3%;
+}

@@ -1,0 +1,62 @@
+#home-root {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+}
+
+#home-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #F2B9B9;
+}
+
+#home-description {
+    font-size: 1rem;
+    color: #F2B9B9;
+}
+
+#home-cards-container {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4%;
+    overflow: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    border: 3px solid;
+    border-color: gray;
+    width: 18rem;
+    height: 12rem;
+    overflow: auto;
+}
+
+.card-icon {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 10%;
+}
+
+.card-label {
+    color: white;
+    align-self: flex-end;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: auto;
+}
+
+#home-why-us-description {
+    padding: 6% 20% 8% 20%;
+    font-size: 1rem;
+}

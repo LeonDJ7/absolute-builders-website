@@ -1,0 +1,30 @@
+#contact-info-container {
+    flex-grow: 1;
+}
+
+#footer-address-label {
+    color: white;
+    margin-right: 2%;
+}
+
+#footer-phone-label {
+    color: #FFEFD5;
+    font-weight: bold;
+    margin-right: 2%;
+}
+
+#footer-email-label {
+    color: #FFEFD5;
+    font-weight: bold;
+}
+
+#footer-linkedin-label {
+    color: white;
+    float: right;
+    margin-right: 2%;
+}
+
+#footer-facebook-label {
+    color: white;
+    float: right;
+}

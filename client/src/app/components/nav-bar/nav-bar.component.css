@@ -1,0 +1,19 @@
+#nav-header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-option {
+    color: #2F78A0;
+    margin-right: 2%;
+}
+
+#nav-image {
+    width: 40px;
+    height: 40px;
+}
+
+#nav-label {
+    margin-left: 2%;
+}
