@@ -1,0 +1,52 @@
+#contact-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+    padding: 10% 8% 10% 8%;
+}
+
+#contact-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    width: 35%;
+}
+
+#contact-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-input-field {
+    width: 100%;
+    background-color: whitesmoke;
+    color: dimgray;
+    margin-bottom: 1.4rem;
+    padding: 0 0.4rem 0rem 0.4rem;
+}
+
+#contact-input-message {
+    resize: none;
+}
+
+.input-error {
+    color: #c75858;
+    font-size: 0.7rem;
+}
+
+#contact-button {
+    background-color: #f7a8a8;
+    color: whitesmoke;
+    padding-left: 7%;
+    padding-right: 7%;
+    font-family: 'Poppins';
+}
+
+.success-snackbar {
+    background-color: #D0EBAD;
+}
+
+.error-snackbar {
+    background-color: #f7a8a8;;
+}

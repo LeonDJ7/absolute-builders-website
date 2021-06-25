@@ -1,0 +1,7 @@
+<span id='projects-root'>
+    <span class='project' *ngFor='let project of projects;'>
+        <img class='project-image' src='{{project.images[0]}}' >
+        <span>{{project.title}}</span>
+        <span>{{project.location}}</span>
+    </span>
+</span>

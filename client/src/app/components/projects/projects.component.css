@@ -1,0 +1,23 @@
+#projects-root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 8% 10% 4% 10%;;
+}
+
+.project-image {
+    width: 345px;
+    height: 200px;
+    margin-bottom: .5em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4%;
+}
+
+.project-title {
+
+}

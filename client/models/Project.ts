@@ -1,5 +1,5 @@
 export interface Project {
     title: string,
-    address: string,
+    location: string,
     images: string[]
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 
 html, body { height: 100%; margin: 0; background-color: #FFEFD5; font-size: 16px;}
@@ -7,3 +7,9 @@ a {color:#64AFDA; text-decoration: none;}
 a:visited {color:#64AFDA;}
 p {color:#757575;}
 label {color:#757575;}
+li, ul {
+    list-style: none;
+}
+textarea {
+    resize: none;
+}

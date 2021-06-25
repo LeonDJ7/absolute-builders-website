@@ -1,0 +1,34 @@
+<span id='contact-root'>
+
+    <span id='contact-text'> Let us know what we can do for you </span>
+    <form id="contact-form">
+
+        <mat-form-field floatLabel="never" class="contact-input-field">
+            <input placeholder="name..." matInput [formControl]="nameFormControl" #name>
+            <mat-error class='input-error' *ngIf="nameFormControl.hasError('required')">
+                name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="never" class="contact-input-field">
+            <input type='email' matInput placeholder="email..." [formControl]="emailFormControl" [errorStateMatcher]="matcher" #email>
+            <mat-error class='input-error' *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error class='input-error' *ngIf="emailFormControl.hasError('required')">
+                email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="never" class="contact-input-field">
+            <textarea rows=5 matInput placeholder="message..." [formControl]="messageFormControl" id='contact-input-message' #message></textarea>
+            <mat-error class='input-error' *ngIf="messageFormControl.hasError('required')">
+                message is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <button mat-flat-button id='contact-button' (click)="sendMail(name.value, email.value, message.value)"> send! </button>
+
+    </form>
+
+</span>
