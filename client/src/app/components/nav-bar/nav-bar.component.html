@@ -1,8 +1,31 @@
 
 <a id='nav-header' routerLink="/" style="color: #757575">
     <img src='assets/images/fake-absolute-builders-logo.png' id='nav-image'>
-    <label id='nav-label'> Absolute Builders </label>
+    <a id='nav-label'> Absolute Builders </a>
 </a>
+
+<button id=nav-menu-button mat-icon-button [matMenuTriggerFor]="menu" >
+    <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item>
+    <mat-icon>home</mat-icon>
+    <a routerLink="/">Home</a>
+    </button>
+    <button mat-menu-item>
+    <mat-icon>home</mat-icon>
+    <a routerLink="/about">About</a>
+    </button>
+    <button mat-menu-item>
+    <mat-icon>home</mat-icon>
+    <a routerLink="/projects">Projects</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <a routerLink="/contact" >Contact</a>
+    </button>
+</mat-menu> 
 
 <a class='nav-option' routerLink="/">Home</a>
 <a class='nav-option' routerLink="/about">About</a>

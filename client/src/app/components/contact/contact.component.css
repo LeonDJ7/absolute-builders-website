@@ -9,7 +9,7 @@
 #contact-text {
     font-size: 2.2rem;
     font-weight: 700;
-    width: 35%;
+    width: 40%;padding-right: 4%;
 }
 
 #contact-form {
@@ -43,10 +43,29 @@
     font-family: 'Poppins';
 }
 
-.success-snackbar {
-    background-color: #D0EBAD;
+::ng-deep snack-bar-container.success-snackbar {
+    background-color: #b1d384;
+    margin: auto;
 }
 
-.error-snackbar {
-    background-color: #f7a8a8;;
+::ng-deep snack-bar-container.error-snackbar {
+    background-color: #ee4444;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #contact-root {
+        flex-direction: column;
+    }
+
+    .contact-input-field {
+        margin-left: -0.4rem;
+    }
+
+    #contact-text {
+        width: 100%;
+        padding-bottom: 8%;
+    }
+    
 }

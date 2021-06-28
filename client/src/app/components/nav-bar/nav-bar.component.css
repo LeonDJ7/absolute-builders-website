@@ -19,3 +19,28 @@
     color: #FFEFD5;
     font-weight: 700;
 }
+
+#nav-menu-button {
+    display: none;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #nav-menu-button {
+        display: block;
+    }
+
+    .nav-option {
+        display: none;
+    }
+
+    #nav-label {
+        display: none;
+    }
+
+    #nav-image {
+        padding-left: 1rem;
+    }
+
+}

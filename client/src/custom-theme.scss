@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import '~@angular/material/theming';
+
+@include mat-core();
+$custom-typography: mat-typography-config(
+  $font-family: '"Poppins", sans-serif;'
+);
+$custom-theme-primary: mat-palette($mat-grey, 900);
+$custom-theme-accent:mat-palette($mat-pink, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+@include mat-core($custom-typography);
+@include angular-material-theme($custom-theme);

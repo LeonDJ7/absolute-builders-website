@@ -12,6 +12,8 @@
     font-size: 6rem;
     font-weight: bold;
     color: #f7a8a8;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 #home-description {
@@ -39,6 +41,7 @@
     width: 18rem;
     height: 12rem;
     overflow: auto;
+    margin-bottom: 2rem;
 }
 
 .card-icon {
@@ -56,6 +59,31 @@
 }
 
 #home-why-us-description {
-    padding: 6% 20% 8% 20%;
+    padding: 3% 20% 8% 20%;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #home-why-us-description {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #home-title {
+        font-size: 4rem;
+    }
+    
+}
+
+@media only screen and (max-width: 1080px) {
+
+    #home-cards-container {
+        flex-direction: column;
+    }
+
+    #home-root {
+        text-align: center;
+    }
+    
 }

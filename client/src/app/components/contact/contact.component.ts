@@ -2,7 +2,7 @@ import { environment } from './../../../environments/environment';
 import { Component, OnInit, NgZone } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -42,8 +42,10 @@ export class ContactComponent implements OnInit {
   sendMail = (name: string, email: string, message: string) => {
 
     if (this.nameFormControl.invalid || this.emailFormControl.invalid || this.messageFormControl.invalid) {
-      this._snackBar.open('success: you\'re email was sent', 'close', {
-        panelClass: 'success-snackbar'
+      this.zone.run(() => {
+        this._snackBar.open('error: invalid input', 'X', {
+          panelClass: 'error-snackbar'
+        })
       })
       return
     }
@@ -58,15 +60,17 @@ export class ContactComponent implements OnInit {
       Body : 'Name: ' + name + ' <br/> Email: ' + email + ' <br> Message: ' + message,
     })
     .then( (message: string) => {
-      this._snackBar.open('success: you\'re email was sent', 'close', {
-        duration: 2000,
-        panelClass: 'success-snackbar'
+      this.zone.run(() => {
+        this._snackBar.open('success: you\'re email was sent', 'X', {
+          panelClass: 'success-snackbar'
+        })
       })
       console.log(message)
     }).catch( (err: any) => {
-      this._snackBar.open('success: you\'re email was sent', 'close', {
-        duration: 2000,
-        panelClass: 'success-snackbar'
+      this.zone.run(() => {
+        this._snackBar.open('error: something went wrong', 'X', {
+          panelClass: 'error-snackbar'
+        })
       })
       console.log(err)
     })

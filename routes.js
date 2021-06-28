@@ -4,17 +4,17 @@ const routes = express.Router()
 const projects = [
     {
         title: 'Kitchen renovation',
-        address: '216 High St, Abington MA',
+        location: '216 High St, Abington MA',
         images: []
     },
     {
         title: 'New home',
-        address: '2 Kearsarge Rd, Yarmouth MA',
+        location: '2 Kearsarge Rd, Yarmouth MA',
         images: []
     }
 ]
 
-routes.get('/project', async function (req, res) {
+routes.get('/projects', async function (req, res) {
   try {
     res.send(projects);
   }
