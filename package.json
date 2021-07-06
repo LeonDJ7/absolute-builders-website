@@ -1,13 +1,15 @@
 {
   "name": "absolute-builders-server",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
-    "server": "concurrently \"nodemon server.js\" \"cd client && ng serve\""
+    "start": "cd client && ng build && cd .. && nodemon server.js"
   },
   "dependencies": {
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.13.0",
     "nodemon": "^2.0.7"
   }
 }

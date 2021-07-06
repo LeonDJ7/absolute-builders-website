@@ -19,12 +19,16 @@
     font-weight: 800;
 }
 
-#footer-linkedin-label {
-    color: white;
+#facebook-icon {
+    width: 48px;
+    height: 48px;
 }
 
-#footer-facebook-label {
-    color: white;
+#footer-website-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {

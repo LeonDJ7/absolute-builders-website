@@ -1,26 +1,24 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const routes = express.Router()
 
-const projects = [
-    {
-        title: 'Kitchen renovation',
-        location: '216 High St, Abington MA',
-        images: []
-    },
-    {
-        title: 'New home',
-        location: '2 Kearsarge Rd, Yarmouth MA',
-        images: []
-    }
-]
+const projectSchema = new mongoose.Schema({
+  title: String,
+  location: String,
+  images: [String],
+  imageIndex: Number 
+});
+
+const Project = mongoose.model('Project', projectSchema, 'projects');
 
 routes.get('/projects', async function (req, res) {
   try {
-    res.send(projects);
+    const projects = await Project.find().lean()
+    res.send(projects)
   }
   catch (err) {
     console.log(err)
   }
-});
+})
 
 module.exports = routes

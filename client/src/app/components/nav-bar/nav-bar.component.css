@@ -1,7 +1,6 @@
 #nav-header {
     display: flex;
     align-items: center;
-    flex-grow: 1;
 }
 
 .nav-option {
@@ -18,11 +17,16 @@
     margin-left: 2%;
     color: #FFEFD5;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 #nav-menu-button {
     display: none;
     margin-right: 1rem;
+}
+
+#nav-space {
+    flex-grow: 1;
 }
 
 @media only screen and (max-width: 768px) {

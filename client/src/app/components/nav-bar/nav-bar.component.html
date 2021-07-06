@@ -4,25 +4,27 @@
     <a id='nav-label'> Absolute Builders </a>
 </a>
 
+<span id=nav-space></span>
+
 <button id=nav-menu-button mat-icon-button [matMenuTriggerFor]="menu" >
     <mat-icon>more_vert</mat-icon>
 </button>
 
 <mat-menu #menu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item>
-    <mat-icon>home</mat-icon>
-    <a routerLink="/">Home</a>
-    </button>
-    <button mat-menu-item>
-    <mat-icon>home</mat-icon>
-    <a routerLink="/about">About</a>
-    </button>
-    <button mat-menu-item>
-    <mat-icon>home</mat-icon>
-    <a routerLink="/projects">Projects</a>
-    </button>
-    <button mat-menu-item>
         <mat-icon>home</mat-icon>
+        <a routerLink="/">Home</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>perm_identity</mat-icon>
+        <a routerLink="/about">About</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>list_alt</mat-icon>
+        <a routerLink="/projects">Projects</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>email</mat-icon>
         <a routerLink="/contact" >Contact</a>
     </button>
 </mat-menu> 

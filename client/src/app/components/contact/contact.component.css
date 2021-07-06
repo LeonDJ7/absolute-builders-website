@@ -23,7 +23,7 @@
     background-color: whitesmoke;
     color: dimgray;
     margin-bottom: 1.4rem;
-    padding: 0 0.4rem 0rem 0.4rem;
+    padding: 0 0.4rem 0.2rem 0.4rem;
 }
 
 #contact-input-message {
@@ -33,6 +33,7 @@
 .input-error {
     color: #c75858;
     font-size: 0.7rem;
+    height: 1rem;
 }
 
 #contact-button {

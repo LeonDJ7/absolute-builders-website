@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Project } from 'models/Project'
+import { ProjectsService } from '../../services/projects.service'
 
 @Component({
   selector: 'app-projects',
@@ -8,37 +9,14 @@ import { Project } from 'models/Project'
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: Project[] = [
-    {
-      images: ['assets/images/fake-project-1.jpeg', 'assets/images/fake-project-2.jpg'],
-      title: 'Kitchen Renovation',
-      location: '216 High St, Abington MA',
-      imageIndex: 0
-    },
-    {
-      images: ['assets/images/fake-project-2.jpg', 'assets/images/fake-project-1.jpeg'],
-      title: 'New Home',
-      location: '2 Kearsarge Rd, Yarmouth MA',
-      imageIndex: 0
-    },
-    {
-      images: ['assets/images/fake-project-2.jpg', 'assets/images/fake-project-1.jpeg'],
-      title: 'New Home',
-      location: '2 Kearsarge Rd, Yarmouth MA',
-      imageIndex: 0
-    },
-    {
-      images: ['assets/images/fake-project-1.jpeg', 'assets/images/fake-project-2.jpg'],
-      title: 'Kitchen Renovation',
-      location: '216 High St, Abington MA',
-      imageIndex: 0
-    },
-  ]
+  projects: Project[] = []
 
-  constructor() { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-
+    this.projectsService.getProjects().subscribe((projects) => {
+      this.projects = projects
+    })
   }
 
   decreaseImageIndex = (project: Project) => {
