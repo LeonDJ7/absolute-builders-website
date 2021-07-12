@@ -28,10 +28,10 @@ export class ProjectsComponent implements OnInit {
   }
 
   increaseImageIndex = (project: Project) => {
-    if (project.imageIndex != 0) { 
-      project.imageIndex = project.imageIndex - 1 
+    if (project.imageIndex != project.images.length - 1) { 
+      project.imageIndex = project.imageIndex + 1 
     } else { 
-      project.imageIndex = project.images.length - 1 
+      project.imageIndex = 0 
     }
   }
 

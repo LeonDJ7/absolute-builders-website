@@ -1,15 +1,14 @@
-<span id=projects-root-root>
-    <span id='projects-root'>
-        <span class='project' *ngFor='let project of projects;'>
-            <span class='project-image-scroll'>
-                <input (click)='decreaseImageIndex(project)' class='decrease-arrow' type="image" src="assets/images/decrease-arrow.png">
-                <a href='{{project.images[project.imageIndex]}}'><img class='project-image' src='{{project.images[project.imageIndex]}}' ></a>
-                <input (click)='increaseImageIndex(project)' class='increase-arrow' type="image" src="assets/images/increase-arrow.png">
-            </span>
-            <span class='project-text'>
-                <span>{{project.title}}</span>
-                <span>{{project.location}}</span>
-            </span>
+<span id='projects-root'>
+    <span class='project' *ngFor='let project of projects;'>
+        <span class='project-text' > check out some of our previous work </span>
+        <span class='project-image-scroll'>
+            <input (click)='decreaseImageIndex(project)' class='decrease-arrow' type="image" src="assets/images/decrease-arrow.png">
+            <a href='{{project.images[project.imageIndex]}}'><img class='project-image' src='{{project.images[project.imageIndex]}}' ></a>
+            <input (click)='increaseImageIndex(project)' class='increase-arrow' type="image" src="assets/images/increase-arrow.png">
+        </span>
+        <span class='project-text'>
+            <span class='project-title'>{{project.title}}</span>
+            <span>{{project.location}}</span>
         </span>
     </span>
 </span>
