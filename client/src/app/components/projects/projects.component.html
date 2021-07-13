@@ -1,6 +1,5 @@
 <span id='projects-root'>
     <span class='project' *ngFor='let project of projects;'>
-        <span class='project-text' > check out some of our previous work </span>
         <span class='project-image-scroll'>
             <input (click)='decreaseImageIndex(project)' class='decrease-arrow' type="image" src="assets/images/decrease-arrow.png">
             <a href='{{project.images[project.imageIndex]}}'><img class='project-image' src='{{project.images[project.imageIndex]}}' ></a>
