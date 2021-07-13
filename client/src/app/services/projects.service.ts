@@ -13,7 +13,7 @@ export class ProjectsService {
 
   getProjects(): Observable<Project[]> {
 
-    return this.http.get<Project[]>('http://localhost:4201/api/projects')
+    return this.http.get<Project[]>('/api/projects')
     .pipe(  
       tap(_ => console.log('fetched projects')),
       catchError(this.handleError<Project[]>('getProjects', []))
