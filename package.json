@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "cd client && ng build && cd .. && nodemon server.js",
-    "heroku-postbuild": "cd client && npm install && ng build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
     "concurrently": "^6.2.0",
