@@ -6,7 +6,8 @@
     "npm": "6.x"
   },
   "scripts": {
-    "start": "cd client && ng build && cd .. && nodemon server.js"
+    "start": "node server.js",
+    "dev": "cd client && ng build && cd .. && nodemon server.js"
   },
   "dependencies": {
     "concurrently": "^6.2.0",
@@ -14,6 +15,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.13.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
   }
 }
