@@ -1,1 +1,1 @@
-web: cd client && ng build && cd .. && node server.js
+web: node server.js
