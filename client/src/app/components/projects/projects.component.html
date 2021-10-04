@@ -1,4 +1,5 @@
 <span id='projects-root'>
+    <mat-error *ngIf="projects.length === 0"> oops... something went wrong loading the projects</mat-error>
     <span class='project' *ngFor='let project of projects;'>
         <span class='project-image-scroll'>
             <input (click)='decreaseImageIndex(project)' class='decrease-arrow' type="image" src="assets/images/decrease-arrow.png">
