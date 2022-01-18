@@ -1,2 +1,2 @@
 # absolute-builders-website
-a website for Absolute Builders LLC
+a mock website for Absolute Builders LLC, built with Angular and TypeScript
